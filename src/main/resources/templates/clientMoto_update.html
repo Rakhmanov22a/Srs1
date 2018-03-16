@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" th:href = "@{/css/bootstrap.min.css}" />
+</head>
+<body>
+
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="form-group">
+            <form action="#" th:action="@{/clientMoto/adds}" th:object = "${clientMotoo}" method="POST">
+                <label for="namemoto">Name</label>
+                <input type="text" id="namemoto" name="namemoto" th:field = "*{nameMoto}" class="form-control" placeholder="Атын  енгіз" />
+
+                <label for="god">God</label>
+                <input type="text" id="god" name="god" th:field = "*{god}" class="form-control" placeholder="Жылын енгіз" />
+
+                <label for="cena">Cena</label>
+                <input type="text" id="cena" name="cena" th:field = "*{cena}" class="form-control" placeholder="Бағасын енгіз"/>
+
+                <br/>
+                <button type="submit" class="btn btn-primary">Сақтау</button>
+
+
+            </form>
+        </div>
+    </div>
+</div>
+
+<script th:src = "@{/js/bootstrap.min.js}"></script>
+<script th:src="@{/js/jquery-3.3.1.min.js}"></script>
+</body>
+</html>
